@@ -1,0 +1,170 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/*
+=============== 
+Variables
+===============
+*/
+:root {
+  /* colores default */
+  --clr-white: #fff;
+  --clr-black: #222;
+
+  /* paleta de colores*/
+  --clr-main: #8da290;
+  --clr-sub-main: #bec7b5;
+  --clr-rojo: #ff756d;
+  --clr-rojo-clarito: #ffb9b3;
+  --clr-verde: #619c71;
+
+
+  /* fuentes  */
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  
+  --spacing: 0.25rem;
+  
+  /* estilos para botones */
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --transition: all 0.3s linear;
+  
+  /* alturas */
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-secondary); /* "Open Sans", sans-serif */
+  background-color: var(--clr-white); /* hsl(206, 33%, 96%) */
+  color: var(--clr-main); 
+  line-height: 1.5;
+}
+
+h1 {
+  letter-spacing: var(--spacing);
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1 {
+    line-height: 1;
+  }
+  .button-container {
+    padding-left: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 800px){
+  .button-container {
+    padding-left: 0rem;
+  }
+}
+
+/*  global classes */
+.btn {
+  background: transparent;
+  padding: 0.375rem 0.75rem;
+  
+  color: var(--clr-black);
+  font-size: 0.875rem;
+  letter-spacing: var(--spacing);
+  text-transform: uppercase;
+  transition: all 0.3s linear;
+
+  border: 2px solid var(--clr-black);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
+  
+  cursor: pointer;
+}
+
+
+/*
+=============== 
+Contador
+===============
+*/
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  text-align: center;
+}
+
+.container span {
+  color: var(--clr-sub-main); 
+}
+
+
+#valor {
+  font-size: 6rem;
+  font-weight: bold;
+}
+
+.btn {
+  margin: 0.5rem;
+}
+.btn:hover {
+  color: var(--clr-white);
+}
+
+.btn-descontar {
+  border-color: var(--clr-rojo-clarito);
+  color: var(--clr-rojo);
+}
+.btn-descontar:hover {
+  background-color: var(--clr-rojo);
+}
+
+.btn-reiniciar {
+  border-color: var(--clr-sub-main);
+  color: var(--clr-main);
+}
+.btn-reiniciar:hover {
+  background-color: var(--clr-main);
+}
+
+.btn-incrementar {
+  border-color: var(--clr-verde-clarito);
+  color: var(--clr-verde);
+}
+.btn-incrementar:hover {
+  background-color: var(--clr-verde);
+}
