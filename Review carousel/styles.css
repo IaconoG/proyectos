@@ -1,0 +1,209 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/*
+=============== 
+Variables
+===============
+*/
+:root {
+  /* colores default */
+  --clr-white: #fff;
+  --clr-black: #222;
+
+  /* paleta de colores*/
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-5: hsl(205, 78%, 60%);
+  --clr-grey-5: hsl(209, 38%, 35%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  
+  --clr-main: #8da290;
+  --clr-verde: #619c71;
+  --clr-sub-main: #bec7b5;
+  --clr-rojo: #ff756d;
+  --clr-rojo-clarito: #ffb9b3;
+
+
+  /* fuentes  */
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  
+  --spacing: 0.25rem;
+  
+  /* estilos para botones */
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --transition: all 0.3s linear;
+  
+  /* alturas */
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-secondary);
+  background: var(--clr-grey-10);
+  color: var(--clr-grey-5);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+h2, h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+}
+h2 {
+  font-size: 2rem;
+}
+h4 {
+  font-size: 0.875rem;
+  letter-spacing: 0.1rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+}
+@media screen and (min-width: 800px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h2, h4 {
+    line-height: 1;
+  }
+}
+
+
+
+/* section container */
+.container{
+  width: 80vw;
+  max-width: var(--fixed-width);
+}
+.titulo {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.linea {
+  height: 0.25rem;
+  width: 5rem;
+  background: var(--clr-main);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* article review */
+.review {
+  background: var(--clr-white);
+  padding: 1.5rem 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--light-shadow);
+  transition: var(--transition);
+  text-align: center;
+}
+.review:hover {
+  box-shadow: var(--dark-shadow);
+}
+.img-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+
+}
+#persona_img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+}
+#persona {
+  margin-bottom: 0.25rem;
+}
+#puesto {
+  margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: var(--clr-verde);
+  font-size: 0.95rem;
+}
+#descripcion {
+  margin-bottom: 0.75rem;
+}
+.ant-btn, .sig-btn {
+  color: var(--clr-rojo-clarito);
+  font-size: 2.25rem;
+  background: transparent;
+  border-color: transparent;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.sig-btn {
+  margin-left: 0.8rem;
+}
+.ant-btn:hover, .sig-btn:hover {
+  color: var(--clr-rojo);
+}
+.sorprendeme-btn {
+  margin: 0.5rem;
+  background: transparent;
+  padding: 0.25rem 0.5rem;
+  
+  color: var(--clr-black);
+  font-size: 0.875rem;
+  letter-spacing: var(--spacing);
+  text-transform: uppercase;
+  transition: var(--transition);
+
+  border: 2px solid var(--clr-black);
+  border-color: var(--clr-main);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
+  
+  cursor: pointer;
+}
+.sorprendeme-btn:hover {
+  background: var(--clr-verde);
+  color: var(--clr-white);
+}
