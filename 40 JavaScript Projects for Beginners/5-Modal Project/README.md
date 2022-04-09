@@ -1,7 +1,7 @@
 # Modal project
 En este projecto se crea una ventana modal en la cual los usuarios pueden ver la paleta de colores (predefinida) del fondo de pantalla
 
-## lineas usadas:
+## conceptos usados:
 
   - getElementById()
   - querySelector()
