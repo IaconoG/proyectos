@@ -1,0 +1,11 @@
+{
+  "name": "8-restaurant-menu-page",
+  "version": "1.0.0",
+  "description": "En este projecto",
+  "main": "index.js",
+  "scripts": {
+    "test": "run"
+  },
+  "author": "Iacono Gianfranco",
+  "license": "ISC"
+}
